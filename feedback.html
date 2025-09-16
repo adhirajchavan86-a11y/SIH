@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Student Mentor Platform - Feedback</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- ===== Navbar ===== -->
+  <nav class="navbar">
+  <div class="logo">Student Growth Hub</div>
+  <ul>
+    <li><a href="home.html">Home</a></li>
+    <li><a href="dashboard.html">Profile</a></li>
+    <li><a href="mentor.html">Mentor Flow</a></li>
+    <li><a href="feedback.html" class="active">Feedback</a></li>
+    <li><a href="about.html">About Us</a></li>
+  </ul>
+</nav>
+
+  <!-- ===== Feedback Section ===== -->
+  <section class="section">
+    <h2>Feedback Form</h2>
+
+    <!-- Box / Card for the Form -->
+    <div class="feedback-card">
+      <form id="feedbackForm">
+        <label for="name">Your Name</label>
+        <input type="text" id="name" name="name" placeholder="Enter your name" required>
+
+        <label for="email">Email Address</label>
+        <input type="email" id="email" name="email" placeholder="Enter your email" required>
+
+        <label for="rating">Rate your experience</label>
+        <select id="rating" name="rating" required>
+          <option value="">Select rating</option>
+          <option value="5">5 - Excellent</option>
+          <option value="4">4 - Very Good</option>
+          <option value="3">3 - Good</option>
+          <option value="2">2 - Fair</option>
+          <option value="1">1 - Poor</option>
+        </select>
+
+        <label for="comments">Comments / Suggestions</label>
+        <textarea id="comments" name="comments" rows="5" placeholder="Your feedback..." required></textarea>
+
+        <button type="submit">Submit Feedback</button>
+      </form>
+      <p id="feedbackMessage" style="margin-top: 10px; text-align:center; color: green; display:none;">
+        Thank you for your feedback!
+      </p>
+    </div>
+  </section>
+
+  <script>
+    const form = document.getElementById('feedbackForm');
+    const message = document.getElementById('feedbackMessage');
+
+    form.addEventListener('submit', (e) => {
+      e.preventDefault();
+      form.reset();
+      message.style.display = 'block';
+      setTimeout(() => { message.style.display = 'none'; }, 4000);
+    });
+  </script>
+</body>
+</html>

@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Student Mentor Platform - Mentors</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- ===== Navbar ===== -->
+  <nav class="navbar">
+  <div class="logo">Student Growth Hub</div>
+  <ul>
+    <li><a href="home.html">Home</a></li>
+    <li><a href="dashboard.html">Profile</a></li>
+    <li><a href="mentor.html" class="active">Mentor Flow</a></li>
+    <li><a href="feedback.html">Feedback</a></li>
+    <li><a href="about.html">About Us</a></li>
+  </ul>
+</nav>
+
+  <!-- ===== Mentor Section ===== -->
+  <section class="section">
+    <h2>Our Mentors</h2>
+    <div class="mentor-list">
+
+      <!-- Mentor Card 1 -->
+      <div class="mentor">
+        <img src="https://static.vecteezy.com/system/resources/previews/036/280/650/non_2x/default-avatar-profile-icon-social-media-user-image-gray-avatar-icon-blank-profile-silhouette-illustration-vector.jpg" alt="Mentor Photo">
+        <p><strong>John Doe</strong></p>
+        <p>Expert in Public Speaking & Confidence Building</p>
+        <div class="mentor-buttons">
+          <button onclick="openChat(this)">Chat</button>
+          <button onclick="startCall(this)">Call</button>
+        </div>
+      </div>
+
+      <!-- Mentor Card 2 -->
+      <div class="mentor">
+        <img src="https://static.vecteezy.com/system/resources/previews/036/280/650/non_2x/default-avatar-profile-icon-social-media-user-image-gray-avatar-icon-blank-profile-silhouette-illustration-vector.jpg" alt="Mentor Photo">
+        <p><strong>Jane Smith</strong></p>
+        <p>Career Guidance & Personality Development</p>
+        <div class="mentor-buttons">
+          <button onclick="openChat(this)">Chat</button>
+          <button onclick="startCall(this)">Call</button>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ===== Chat Box ===== -->
+  <div class="chat-box" id="chatBox">
+    <div class="chat-header">
+      <span id="chatMentorName">Mentor</span>
+      <button onclick="closeChat()">X</button>
+    </div>
+    <div class="chat-messages" id="chatMessages"></div>
+    <div class="chat-options" id="chatOptions"></div>
+  </div>
+
+  <!-- ===== Call Modal ===== -->
+  <div class="modal" id="callModal">
+    <div class="modal-content">
+      <span class="close" onclick="closeCall()">&times;</span>
+      <h3 id="callTitle"></h3>
+      <p id="callMessage"></p>
+      <p id="callTimer">Duration: 00:00</p>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
